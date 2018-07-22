@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <table>
+      <thead>
+        <th>File Id</th>
+        <th>File Name</th>
+        <th>File Size</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let file of files">
+          <td>{{file.fileId}}</td>
+          <td>
+            <a (click)="downloadFile(file.fileName)">{{file.fileName}}</a>
+          </td>
+          <td>{{file.fileSize}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
